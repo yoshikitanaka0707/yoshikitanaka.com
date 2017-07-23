@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+  <html lang="ja">
+   <head>
+    <meta charset="UTF-8">
+    <TITLE>田中良樹のポートフォリオ</TITLE>
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <meta name="descpription" content="田中良樹のポートフォリオです。">
+    <meta name="keyword"　content="田中良樹,ポートフォリオ,yoshikitanaka,portofolio,田中,良樹,tanaka,yoshiki,田中良樹のポートフォリオ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/portfolio.css">
+    <link href="css/jquery.bxslider.css" rel="stylesheet" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link href="css/jquery.booklet.latest.css" type="text/css" rel="stylesheet" media="screen, projection, tv" />
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.booklet.latest.min.js"></script>
+    <script type="text/javascript" src="js/lib/greensock/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/lib/velocity.min.js"></script>
+    <script type="text/javascript" src="js/lib/highlight.pack.js"></script>
+    <script type="text/javascript" src="js/lib/modernizr.custom.min.js"></script>
+    <script type="text/javascript" src="js/scrollmagic/uncompressed/ScrollMagic.js"></script>
+    <script type="text/javascript" src="js/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+    <script type="text/javascript" src="js/scrollmagic/uncompressed/plugins/animation.velocity.js"></script>
+    <script type="text/javascript" src="js/jquery.fadethis.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript">
+            $(window).load(function(){
+                $('.bxslider').bxSlider({
+                    auto: false,
+                });
+          });
+    </script>
+    <script>
+     var controller = new ScrollMagic.Controller();
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-93998766-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+   </head>
+
+
+
+
+
+<body>
+  <div id="loader-bg">
+    <div id="loader">
+      <img src="assets/img/gif.gif" width="300" height="300" alt="Now Loading..." />
+    </div>
+  </div>
+    <script>
+      $(function() {
+      var h = $(window).height();
+      $('#wrap').css('display','none');
+      $('#loader-bg ,#loader').height(h).css('display','block');
+      });
+      $(window).load(function () {
+      $('#loader-bg').delay(900).fadeOut(800);
+      $('#loader').delay(600).fadeOut(300);
+      $('#wrap').css('display', 'block');
+      });
+    </script>
+
+
+
+
+
+  <div id="wrapper">
+    <div id="opening">
+      <div id="triggerAnime"></div>
+      <div id="center">
+        <div id="imagesequence">
+          <img src="assets/img/introAnime1.jpg" alt="animeImage1" id="animate">
+        </div>
+      </div>
+      <script>
+      	var images = [
+          "assets/img/introAnime1.jpg",
+      		"assets/img/introAnime2.jpg",
+      		"assets/img/introAnime3.jpg",
+      		"assets/img/introAnime4.jpg",
+      		"assets/img/introAnime5.jpg",
+          	"assets/img/introAnime6.jpg"
+      	];
+      	var obj = {curImg: 0};
+      	var tween = TweenMax.to(obj, 0.5,
+      		{
+      			curImg: images.length -0.3,
+      			roundProps: "curImg",
+      			repeat: 0,
+      			immediateRender: true,
+      			ease: Linear.easeNone,
+      			onUpdate: function () {
+      			  $("#animate").attr("src", images[obj.curImg]);
+      			}
+      		}
+      	);
+      	var controller = new ScrollMagic.Controller();
+      	var scene = new ScrollMagic.Scene({triggerElement: "#triggerAnime", duration: 5000, offset: 800})
+      					.setTween(tween)
+      					.addTo(controller);
+      	$("form.move input[name=duration]:radio").change(function () {
+      		scene.duration($(this).val());
+      	});
+      </script>
+      <script>
+      	$(function () {
+      		var scene = new ScrollMagic.Scene({triggerElement: "#triggerAnime", duration: 5000})
+      						.setPin("#imagesequence")
+      						.addTo(controller);
+      	});
+      </script>
+  </div>
+
+
+
+
+
+        <div id="portfolio">
+          <div id="trigger"></div>
+          <div id="animation2">
+            <div id="index">
+              <h1 id="portfolioTitle" class="fontTitle fontCenter font1"><b>田中良樹の<br>ポートフォリオ</b></h1>
+              <ol id="indexContent" class="font1 fontText">
+                <li>はじめに</li>
+                <li>私のこと</li>
+                <li>デザインスキル</li>
+                <li>実績-インターン</li>
+                <li>実績-LIT</li>
+                <li>実績-ハッカソン</li>
+                <li>実績-アプリ</li>
+                <li>おわりに</li>
+              </ol>
+            </div>
+            <div>
+              <div id="handBody">
+                <img src="assets/img/portfolioBack.png" alt="handBodyImage">
+              </div>
+              <div id="trigger2"></div>
+            </div>
+            <div>
+              <div id="head">
+                <img src="assets/img/head.png" alt="headImage">
+              </div>
+            </div>
+            <div id="intro">
+              <div>
+                <h2 id="introTitle" class="font1 fontTitle textCenter">1.はじめに</h2>
+              </div>
+              <div id="introText" class="font2 fontText">
+                <p>私、田中良樹のポートフォリオサイトを見ていただきありがとうございます。このサイトには、まず２項に私が何者でなぜデザイナーを目指そうとするかについて簡単に書かれ、
+                  ３項にはデザインスキルがまとめられています。４項から7項まではデザイナーとしての実績が載せられており、8項に私がデザイナーを目指す具体的な理由とデザイナーとして何をしたいか
+                　どうなりたいかについてが書かれています。最後までよろしくお願いします。</p>
+              </div>
+            </div>
+              <script>
+                TweenMax.set("#head", {top: "+=30"})
+                var tween = new TimelineMax()
+                .to("#head", 1, {top: "-=40",})
+                var scene = new ScrollMagic.Scene({
+                  triggerElement: "#trigger2", offset: 900
+                })
+              .setTween(tween)
+              .addTo(controller);
+              </script>
+              <script>
+                    var expansion = new ScrollMagic.Scene({
+                     triggerElement: "#trigger", offset: -200// トリガー指定
+                     })
+                     .setTween("#animation2", 0.5, {scale: 1.2})  // 0.5秒で1.5倍拡大
+                     .addTo(controller);
+              </script>
+            </div>
+          </div>
+
+
+
+
+
+      <div id="aboutMe">
+        <h2 class="fontTitle4 font1" id="aboutMeTitle">2.私のこと</h2>
+        <div>
+          <div class="slide-left skillImage">
+            <img src="assets/img/handPen.png" alt="handPenImage">
+          </div>
+            <div class="skillText">
+              <h3 class="fontTitle3 font1">物作りを職業とするか</h3>
+                <p class="fontText2 font2">
+                  私は小さい頃から、人に物を作って喜ばせたり役に立ったりすることが大好きな人間でした。木を切ってスプーンを作りプレゼントしたことも僕の原風景であり物作りを職業にできればと考えていました。
+                </p>
+            </div>
+          </div>
+        <div class="skillPadding">
+          <div class="skillText">
+            <h3 class="fontTitle3 font1">教育を職業とするか</h3>
+            <p class="fontText2 font2">
+              また、母親が教師であり、児童から好かれ尊敬される姿を見て、教師になりたいと言う気持ちが自然にありました。サッカーの選抜チームでキャプテンを任せられたときなどに教えることがとても好きだと感じ教師になりたいとも思いました。
+            </p>
+          </div>
+          <div class="slide-right skillImage">
+            <img src="assets/img/handChoke.png" alt="handChokeImage">
+          </div>
+        </div>
+        <div class="skillPadding">
+          <div class="slide-left skillImage2">
+                      <img src="assets/img/hat.png" alt="hatImage">
+          </div>
+          <div class="skillText">
+            <h3 class="fontTitle3 font1">どちらも挑戦できる大学に</h3>
+              <p class="fontText2 font2">
+                大学選びで非常に悩みましたが、ここで教師になる道が途絶える、美大に行くことは非常に悔しいと感じました。好きなことをどちらも精一杯やって向いている方を選ぼう、そう思い一見デザイナーとは程遠いような大学を選んだのです。
+              </p>
+          </div>
+        </div>
+        <div class="skillPadding">
+          <div class="skillText">
+            <h3 class="fontTitle3 font1">やっぱりデザイナーだ</h3>
+            <p class="fontText2 font2">
+              結論はデザイナーになりたいと言うことです。教育実習や塾講師で児童が成長し、良い成績を取るよりも自分が作ったもので人が喜び役に立つことを実感できた経験がずっと感動的でした。このことについては最後にもう一度書きたいと思います。
+            </p>
+          </div>
+          <div class="slide-right skillImage2">
+            <img src="assets/img/smartphone.png" alt="smartPhoneImage">
+          </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="desighnSkill">
+      <div id="trigger3"></div>
+      <div id="chapter2">
+        <h2 class="fontTitle4 font1">3.デザインスキル</h2>
+      </div>
+
+      <div class="skillBox">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 180 200">
+            <path id="animation3" style="stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1009.23px; stroke-dashoffset: 1009.23px;" fill="none" stroke="#000000" stroke-width="5"
+            d="M55.57,20.952
+            C50.837,27.449,21.849,57.506,15,63.609
+            C25.376,74.979,82.47,172.92,87.103,179.324
+          	c2.971-5.771,82.374-117.754,77.699-120.996
+            c-11.633-8.066-42.082-31.087-45.114-33.494
+            c-5.688-4.517-47.469-5.468-51.06-2.298
+          	c-2.589,2.286-30.356,36.124-33.43,43.348
+            c13.52-7.382,29.019-18.272,40.285-29.247
+            c1.641,10.448,1.494,24.262,0.163,34.857
+          	c3.979-11.096,14.158-22.277,20.103-32.465
+            c3.942,3.64,9.938,27.393,11.904,31.975
+            c4.306-12.098,7.969-23.409,8.729-36.11
+          	c8.323,7.587,32.148,30.347,31.677,33.022
+            c-0.598,3.408-53.645,74.242-61.194,80.721
+            c-1.752-7.114,18.811-58.346,23.505-66.748
+          	c-5.479,1.202-36.09-0.969-40.599-1.207
+            c-1.068,8.338,8.324,40.085,10.608,48.166
+            c-5.875-4.119-34.31-44.739-38.63-51.442"
+            /></path>
+          </svg>
+        </div>
+          <script>
+            function pathPrepare ($el) {
+              var lineLength = $el[0].getTotalLength();
+              $el.css("stroke-dasharray", lineLength);
+              $el.css("stroke-dashoffset", lineLength);
+            }
+            var $word = $("path#animation3");
+            pathPrepare($word);
+            var controller = new ScrollMagic.Controller();
+            var tween = new TimelineMax()
+              .add(TweenMax.to($word, 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+            var scene = new ScrollMagic.Scene({triggerElement: "#trigger3", offset: -200, duration: 200, tweenChanges: true})
+                    .setTween(tween)
+                    .addTo(controller);
+          </script>
+        <div>
+          <h3 class="fontTitle3 font1">sketch</h3>
+          <p class="fontText2 font1 star">★★★★★</p>
+          <p class="fontText2 font2">
+            UIデザインに使用しています。ここ一年ずっとこれを使っており、フォトショやイラレより簡単に扱えます。
+          </p>
+        </div>
+      </div>
+
+      <div class="skillBox">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 230 200">
+            <path id="animation4" style="stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1009.23px; stroke-dashoffset: 1009.23px;" fill="none" stroke="#000000" stroke-width="5"
+            d="M138.387,119.128c0-13.612,1.308-71.571,14.503-78.709c24.387-13.195,35.278,69.756,35.661,76.627"/></path>
+            <path id="animation4" style="stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1009.23px; stroke-dashoffset: 1009.23px;" fill="none" stroke="#000000" stroke-width="5"
+             d="M151.433,87.098c3.474-3.31,12.806-4.368,14.56-4.368"/></path>
+            <path id="animation4" style="stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1009.23px; stroke-dashoffset: 1009.23px;" fill="none" stroke="#000000" stroke-width="5"
+             d="M198.934,79.064c2.909,5.209,4.45,30.964,3.454,37.295"/></path>
+            <path id="animation4" style="stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1009.23px; stroke-dashoffset: 1009.23px;" fill="none" stroke="#000000" stroke-width="5"
+             d="M45.879,79.818c4.215-0.194,43.495-9.281,32.227-31.32c-7.392-11.894-32.806-13.8-39.307-0.728
+              c-5.665,11.391-4.451,75.523,2.588,84.404"/></path>
+            <path id="animation4" style="stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1009.23px; stroke-dashoffset: 1009.23px;" fill="none" stroke="#000000" stroke-width="5"
+             d="M84.188,97.425
+              c-4.058-3.617-14.147-5.768-18.616,2.229
+              c-2.608,4.664,1.954,12.21,6.353,14.581
+              c5.395,2.905,12.231,9.009,5.985,15.099
+              c-5.647,5.512-16.311,1.531-20.383-2.2"/></path>
+          </svg>
+        </div>
+          <script>
+            function pathPrepare ($el) {
+              var lineLength = $el[0].getTotalLength();
+              $el.css("stroke-dasharray", lineLength);
+              $el.css("stroke-dashoffset", lineLength);
+            }
+            var $word = $("path#animation4");
+            pathPrepare($word);
+            var controller = new ScrollMagic.Controller();
+            var tween = new TimelineMax()
+              .add(TweenMax.to($word, 0.7, {strokeDashoffset: 0, ease:Linear.easeNone}))
+            var scene = new ScrollMagic.Scene({triggerElement: "#trigger3", offset: -200, duration: 200, tweenChanges: true})
+                    .setTween(tween)
+                    .addTo(controller);
+          </script>
+      <div>
+      <h3 class="fontTitle3 font1 skillPosition">photoshop<br>illustrator</h3>
+      <p class="fontText2 font1 star">★★★★★</p>
+      <p class="fontText2 font2">
+        ランティングページの作成や画像加工、バナー作成などに使用<しています。やりたいことは問題なくなんでもできます。
+      </p>
+      </div>
+      </div>
+
+      <div class="skillBox">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 250 250">
+            <path id="animation3" style="stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1009.23px; stroke-dashoffset: 1009.23px;" fill="none" stroke="#000000" stroke-width="5"
+            d="M169.362,68.544c-10.977,1.65-105.786,90.58-109.333,100"/>
+            <path id="animation3" style="stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1009.23px; stroke-dashoffset: 1009.23px;" fill="none" stroke="#000000" stroke-width="5"
+            d="M60.028,66.211c13.333,4.667,85.257,81.447,108.265,95.819"/>
+            <path id="animation3" style="stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1009.23px; stroke-dashoffset: 1009.23px;" fill="none" stroke="#000000" stroke-width="5"
+            d="M44.029,98.878c15,21.667,79.062,79.037,83.333,82.999"/>
+            <path id="animation3" style="stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1009.23px; stroke-dashoffset: 1009.23px;" fill="none" stroke="#000000" stroke-width="5"
+            d="M102.028,50.544c17.167,6,85.878,76.285,89.333,82.334"/>
+            <path id="animation3" style="stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1009.23px; stroke-dashoffset: 1009.23px;" fill="none" stroke="#000000" stroke-width="5"
+            d="M40.695,134.878c21-29.333,71.465-69,97.333-83"/>
+            <path id="animation3" style="stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1009.23px; stroke-dashoffset: 1009.23px;" fill="none" stroke="#000000" stroke-width="5"
+            d="M92.029,181.877c11.333-3.666,87.938-79.592,97.667-86.666"/>
+            <path id="animation3" style="stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1009.23px; stroke-dashoffset: 1009.23px;" fill="none" stroke="#000000" stroke-width="5"
+            d="M91.304,199.25c-22.5-0.5-67.5-32.702-67.5-72.368
+            	c0-62.666,40.5-98.632,88-98.632c52,0,94.391,29.093,94.391,88.294c0,52.001-61.995,85.206-77.725,85.206"/>
+          </svg>
+        </div>
+          <script>
+            function pathPrepare ($el) {
+              var lineLength = $el[0].getTotalLength();
+              $el.css("stroke-dasharray", lineLength);
+              $el.css("stroke-dashoffset", lineLength);
+            }
+            var $word = $("path#animation3");
+            pathPrepare($word);
+            var controller = new ScrollMagic.Controller();
+            var tween = new TimelineMax()
+              .add(TweenMax.to($word, 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+            var scene = new ScrollMagic.Scene({triggerElement: "#trigger3", offset: -200, duration: 200, tweenChanges: true})
+                    .setTween(tween)
+                    .addTo(controller);
+          </script>
+        <div>
+          <h3 class="fontTitle3 font1">ProtoPie</h3>
+          <p class="fontText2 font1 star">★★★★★</p>
+          <p class="fontText2 font2">
+            InVisionに変わる新しいプロトタイプツールで、そのままアプリに起こせるくらい複雑なインタラクションを再現できます。
+          </p>
+        </div>
+      </div>
+
+
+
+        <div class="skillBox">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 220 200">
+              <path  id="animation5" style="stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1009.23px; stroke-dashoffset: 1009.23px;" fill="none" stroke="#000000" stroke-width="5"
+                d="M167.067,81.989c3.325,1.565,37.78,0.848,27.418-21.958c-3.895-8.568-26.361-24.645-39.749-10.774
+              	c-8.602,8.914-8.28,77.081-2.225,83.499"/></path>
+              <path  id="animation5" style="stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1009.23px; stroke-dashoffset: 1009.23px;" fill="none" stroke="#000000" stroke-width="5"
+                d="M180.317,134.254c-3.349-5.892-5.534-20.946-2.226-27.975c4.894-10.395,17.684-10.211,20.627-9.383"/></path>
+              <path  id="animation5" style="stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1009.23px; stroke-dashoffset: 1009.23px;" fill="none" stroke="#000000" stroke-width="5"
+                d="M200.703,117.691"/></path>
+              <path  id="animation5" style="stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1009.23px; stroke-dashoffset: 1009.23px;" fill="none" stroke="#000000" stroke-width="5"
+                d="M28.59,117.691c0.037-10.929,2.848-82.779,25.873-70.111c8.859,4.874,14.64,57.987,14.719,70.31"/></path>
+            	<path  id="animation5" style="stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1009.23px; stroke-dashoffset: 1009.23px;" fill="none" stroke="#000000" stroke-width="5"
+                d="M39.778,87.268c3.457-0.639,13.958-0.177,13.931-0.125"/></path>
+              <path  id="animation5" style="stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1009.23px; stroke-dashoffset: 1009.23px;" fill="none" stroke="#000000" stroke-width="5"
+                d="M88.545,95.988c4.251-3.179,13.693-10.2,10.855-16.943c-3.828-9.092-13.254-0.83-15.712,4.544
+              	c-3.345,7.31-4.606,19.524,0.019,26.55c3.214,4.882,11.775,6.447,15.64,2.031"/></path>
+            </svg>
+            </div>
+              <script>
+                function pathPrepare ($el) {
+                  var lineLength = $el[0].getTotalLength();
+                  $el.css("stroke-dasharray", lineLength);
+                  $el.css("stroke-dashoffset", lineLength);
+                }
+                var $word = $("path#animation5");
+                pathPrepare($word);
+                var controller = new ScrollMagic.Controller();
+                var tween = new TimelineMax()
+                  .add(TweenMax.to($word, 0.7, {strokeDashoffset: 0, ease:Linear.easeNone}))
+                var scene = new ScrollMagic.Scene({triggerElement: "#trigger3", offset: -100, duration: 800, tweenChanges: true})
+                        .setTween(tween)
+                        .addTo(controller);
+              </script>
+          <div>
+            <h3 class="fontTitle3 font1 skillPosition">aftereffect<br>premiere</h3>
+            <p class="fontText2 font1 star">★★★★☆</p>
+            <p class="fontText2 font2">
+              アプリの説明動画や,gif,趣味で作るアニメーション作成などに用いています。調べれば割となんでもできます。
+            </p>
+          </div>
+        </div>
+
+        <div class="skillBox">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 160 200">
+              <path id="animation6" style="stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1009.23px; stroke-dashoffset: 1009.23px;" fill="none" stroke="#000000" stroke-width="5"
+                d="M38.879,97.904c14.261,8.54,22.978,18.445,37.257,28.83c0.821-14.173,2.783-83.282-2.337-90.866
+                c-4.205-6.229-37.085-15.312-50.369-14.197c-7.354,7.361-1.469,96.325,4.416,107.056c7.969,7.95,40.58,27.682,61.27,43.701
+                c11.423-9.606,53.636-46.943,58.155-55.04c6.007-10.763,0.904-87.22-3.896-99.693c-6.016-1.514-44.395,11.164-52.184,17.654
+                c-1.661,9.757,1.168,34.507,1.559,45.693c10.385-9.866,23.523-15.206,34.383-17.152c2.256,13.221,3.984,26.354,1.085,39.183
+                c-2.236,9.901-25.785,26.37-33.91,28.075"/></path>
+            </svg>
+          </div>
+            <script>
+              function pathPrepare ($el) {
+                var lineLength = $el[0].getTotalLength();
+                $el.css("stroke-dasharray", lineLength);
+                $el.css("stroke-dashoffset", lineLength);
+              }
+              var $word = $("path#animation6");
+              pathPrepare($word);
+              var controller = new ScrollMagic.Controller();
+              var tween = new TimelineMax()
+                .add(TweenMax.to($word, 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+              var scene = new ScrollMagic.Scene({triggerElement: "#trigger3", offset: -100, duration: 200, tweenChanges: true})
+                      .setTween(tween)
+                      .addTo(controller);
+            </script>
+        <div>
+          <h3 class="fontTitle3 font1">JavaScript</h3>
+          <p class="fontText2 font1 star">★★★☆☆</p>
+          <p class="fontText2 font2">
+            一から描くことはできませんが複数のコードを組み合わせるなどできます。一歩先へ進むために精一杯学習中です。
+          </p>
+        </div>
+        </div>
+
+        <div class="skillBox">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 180 200">
+              <path id="animation7" style="stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1009.23px; stroke-dashoffset: 1009.23px;" fill="none" stroke="#000000" stroke-width="5"
+                d="M79.462,134.422
+                c0,0-51.316-27.558-46.896-72.343
+              	c3.486-35.314,34.062-33.767,42.577-28.254
+                c9.658,6.253,10.1,29.078,19.855,25.939c7.238-2.33,0.793-16.62,10.721-26.979
+              	c9.289-9.695,42.939-13.281,42.813,33.89
+                c-0.158,59.202-54.425,85.972-54.425,85.972"/>
+              </path>
+            </svg>
+          </div>
+            <script>
+              function pathPrepare ($el) {
+                var lineLength = $el[0].getTotalLength();
+                $el.css("stroke-dasharray", lineLength);
+                $el.css("stroke-dashoffset", lineLength);
+              }
+              var $word = $("path#animation7");
+              pathPrepare($word);
+              var controller = new ScrollMagic.Controller();
+              var tween = new TimelineMax()
+                .add(TweenMax.to($word, 0.6, {strokeDashoffset: 0, ease:Linear.easeNone}))
+              var scene = new ScrollMagic.Scene({triggerElement: "#trigger3", offset: -100, duration: 600, tweenChanges: true})
+                      .setTween(tween)
+                      .addTo(controller);
+            </script>
+          <div>
+            <h3 class="fontTitle3 font1 skillTitle skillSpace2">UI/UX</h3>
+            <p class="fontText2 font1 star">★★★☆☆</p>
+            <p class="fontText2 font2">
+              アプリの開発に一から携わり一通りの開発手順を経験しています。テストに足繁く通いユーザー第一を目指しています。
+            </p>
+          </div>
+
+      </div>
+    </div>
+
+
+
+
+
+    <div id="chapter3">
+      <div id="trigger5"></div>
+        <div id="target">
+        	<img id="plane" src="assets/img/plane.png" alt="planeImage">
+        </div>
+          <script>
+          	$(function () {
+          		var flightpath = {
+          			entry : {
+          				curviness: 1.25,
+          				autoRotate: true,
+          				values: [
+          						{x: 100,	y: -20},
+          						{x: 300,	y: 10}
+          					]
+          			},
+          			looping : {
+          				curviness: 1.25,
+          				autoRotate: true,
+          				values: [
+          						{x: 510,	y: 60},
+          						{x: 620,	y: -60},
+          						{x: 500,	y: -100},
+          						{x: 380,	y: 20},
+          						{x: 500,	y: 60},
+          						{x: 580,	y: 20},
+          						{x: 620,	y: 15}
+          					]
+          			},
+          			leave : {
+          				curviness: 1.25,
+          				autoRotate: true,
+          				values: [
+          						{x: 660,	y: 20},
+          						{x: 800,	y: 130},
+          						{x: $(window).width() + 400,	y: -100},
+          					]
+          			}
+          		};
+          		var controller = new ScrollMagic.Controller();
+          		var tween = new TimelineMax()
+          			.add(TweenMax.to($("#plane"), 1.2, {css:{bezier:flightpath.entry}, ease:Power1.easeInOut}))
+          			.add(TweenMax.to($("#plane"), 2, {css:{bezier:flightpath.looping}, ease:Power1.easeInOut}))
+          			.add(TweenMax.to($("#plane"), 1, {css:{bezier:flightpath.leave}, ease:Power1.easeInOut}));
+          		var scene = new ScrollMagic.Scene({triggerElement: "#trigger5", duration: 600, offset: 100})
+          						.setPin("#target")
+          						.setTween(tween)
+          						.addTo(controller);
+          	})
+          </script>
+        <div class="fontCenter slide-bottom" id="RIP">
+        	<img src="assets/img/RIP.png" alt="RIPImage">
+        </div>
+        <h2 class="fontTitle4 font1 fontCenter">4.実績-インターン</h2>
+        <div  class="fontText2 font2 fontCenter" id="intern">
+          <p>フォトショップやイラストレーターを学びたいと思って始めたインターン先で携わったのは、
+            死期間近のガラケー向けアダルトソーシャルゲーム”プリンセスパラダイス”でした。
+            私はそこでわずかに残るユーザーを楽しませるためのイベントをバナーやミニゲームのシナリオライティング、
+            イラストの校正といった作業で手伝い、時々他の部署からくる素材作成を引き受けていました。
+            最後はプリパラとともに引退しましたが、自分の作ったバナーで人を惹きつけようとするといった努力はとても面白く、
+            望み通りのスキルも身についた素晴らしい体験でした。</p>
+        </div>
+    </div>
+
+
+
+
+
+    <a href="https://www.youtube.com/watch?v=iEnzpN9X6SM" style="text-decoration: none; color: #000;" target="_blank">
+      <div id="lifeIsTech">
+        <video src="assets/img/1-2.mov" autoplay loop ></video>
+        <div id="position">
+          <h2  class="fontTitle7 font1 fontCenter">5.実績-<br>ライフイズテック</h2>
+          <p  class="fontText7 font2 fontCenter">
+          ライフイズテックにて動画制作の教習を受けメンターになりました。
+          作りたい、教えたいが一致し一石二鳥の体験で、説明動画など作れるようになりました。
+          </p>
+        </div>
+        <div id="back">
+          <img src="assets/img/paper.png" width="450px" alt="paperImage">
+        </div>
+      </div>
+    </a>
+
+
+
+
+
+    <div id="hackson">
+      <div id="slider">
+        <ul class="bxslider">
+          <li><img src="assets/img/s_1.jpg" alt="slide1"></li>
+          <li><img src="assets/img/s_2.jpeg" alt="slide2"></li>
+      		<li><img src="assets/img/s_3.jpeg" alt="slide3"></li>
+      		<li><img src="assets/img/s_4.jpeg" alt="slide4"></li>
+      		<li><img src="assets/img/s_5.jpeg" alt="slide5"></li>
+        	<li><img src="assets/img/s_6.jpeg" alt="slide6"></li>
+      		<li><img src="assets/img/s_7.jpeg" alt="slide7"></li>
+          <li><img src="assets/img/s_8.jpeg" alt="slide8"></li>
+          <li><img src="assets/img/s_9.jpeg" alt="slide9"></li>
+          <li><img src="assets/img/s_10.jpeg" alt="slide10"></li>
+      	</ul>
+      </div>
+      <div id="face" class="slide-bottom">
+        <img src="assets/img/faceSerious.png" alt="faceSeriousImage">
+      </div>
+        <style>
+          .fade {
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
+            opacity: 0;
+          }
+        </style>
+      <div id="hand7">
+        <img src="assets/img/handLeft.png" alt="handLeftImage">
+      </div>
+        <script>
+          $(function() {
+            $("#hand7").click(function() {
+              $(this).addClass('fade');
+            });
+          });
+        </script>
+      <div id="hand8">
+        <img src="assets/img/handRight.png" alt="handRightImage">
+      </div>
+        <script>
+          $(function() {
+            $("#hand8").click(function() {
+              $(this).addClass('fade');
+            });
+          });
+        </script>
+    </div>
+
+
+
+
+    <div>
+      <div id="smarec">
+        <div id="mybook">
+          <div>
+          </div>
+          <div>
+            <div id="string">
+            <img src="assets/img/string.png" alt="stringImage">
+            </div>
+            <h3 class="fontCenter font1 fontTitle9" id="part1">7.実績-アルバイト</h3>
+            <div class="smarecFont1">
+              <p class="font2 fontText10" style="text-align: center;">
+                ライフイズテックで一緒に働き、ハッカソンも一緒に出た友人とともにアルバイトを紹介してもらいました。
+                内容は介護レクリエーションアプリのデザイン、聞いた時にこれは素晴らしいアイデアだと思いました。<br><br>
+                  <a href="http://smart-recreation.com/" style="text-decoration: none; color: #000;" target="_blank">
+                    smart-recreation.com
+                  </a>
+              </p>
+            </div>
+          </div>
+
+          <div id="part2Image">
+            <img src="assets/img/sad.png" alt="sadImage">
+          </div>
+          <div>
+            <h3 class="fontCenter font1 fontTitle9" id="part2">課題</h3>
+            <div class="smarecFont1">
+              <p class="fontCenter font2 fontText10">
+                介護現場ではレクリエーションが手間を疎んじられ、マンネリで退屈なものと化しています。
+              　また稚拙な内容を嫌われたりと、レクリエーションの参加率が低く健康効果が望めないのが現状です。
+              </p>
+            </div>
+          </div>
+
+          <div id="part3Image">
+            <img src="assets/img/rec.png" alt="recImage">
+            <h3 class="fontCenter font1 fontTitle9" id="part3">解決</h3>
+            <div class="smarecFont1">
+              <p class="fontCenter font2 fontText10">
+                多数のゲームを収録しマンネリかを防ぎ、次へボタンを押すだけなのでレクが簡単になります。
+              </p>
+            </div>
+          </div>
+
+          <div id="part4Image">
+            <img src="assets/img/example.png" alt="exampleImage">
+            <h3 class="fontCenter font1 fontTitle9" id="part４">仕様</h3>
+            <div class="smarecFont1">
+              <p class="fontCenter font2 fontText10">
+                「スマレク」はスライド方式でゲームを進行するものです。AppleTVを使いゲームスライドをプロジェクターを使って投影します。
+              </p>
+            </div>
+          </div>
+
+          <div id="part5Image">
+            <img src="assets/img/recsetMake.png" alt="recsetMakeImage">
+          </div>
+
+          <div>
+            <h3 class=" font1 fontTitle9 fontBook">UI-レク作成</h3>
+            <div class="smarecFont2">
+              <p class=" font2 fontText10 fontBook">
+                このアプリではゲーム一つを10分とし、それらを組み合わせてレクリエーションを作るという形を取っています。この画面でレクを作ります。
+                製作はは理論で考えて作ってから実際にテストすることを繰り返すことを基本としました。
+                はじめはマテリアルデザインでしたが、ボタンを認識できない人が実際にいたのでスキュモーヒズムに変えるなど工夫しています。
+              </p>
+            </div>
+          </div>
+
+          <div id="part6Image">
+            <img src="assets/img/recsetChoice.png" alt="recsetChoiceImage">
+          </div>
+
+          <div>
+            <div class="smarecFont2">
+              <h3 class=" font1 fontTitle9 fontBook">UI-レク選択</h3>
+              <p class=" font2 fontText10 fontBook">
+                本来アプリはこの画面から始まります。
+                どこを押せば良いかはっきり分かるようにデザインしております。各レクは３つにレベル分けをしておりますが実際にテストをしてみますと、
+                施設の方々はそれぞれゲームの達成度が大きく違いました。
+                そのためレク全体で様々なレベルのゲームを選択できるようにすることにより、誰もが楽しめるようにしました。
+              </p>
+            </div>
+          </div>
+
+          <div id="part7Image">
+            <img src="assets/img/RecsetPlay01.png" alt="RecsetPlay01Image">
+          </div>
+
+          <div>
+            <div class="smarecFont2">
+              <h3 class=" font1 fontTitle9 fontBook" id="part5">UI-レク実行</h3>
+              <p class=" font2 fontText10 fontBook">
+                レクリエーション操作画面です。レクはファシリテーションあってこそ成立するためできる限り進行に不安がないようにデザインする必要がありました。
+                第一に大切にしたことが「次へボタンを押すだけでレクができる」という体験を実現することです。
+                次のスライドの答えを確認できたり、ゲームの進行を把握できるようにしレクに集中できるようになっています。
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+        <script>
+          $(function() {
+            var w = $(window).width();
+            var x = 1400;
+            var y = 800;
+            var z = 500;
+              if (x <= w) {
+                $('#mybook').booklet({
+                width:  1000,
+                height: 700
+              });
+              }else if (y < w && w < x){
+                $('#mybook').booklet({
+                width:  650,
+                height: 450
+              });
+              }else if (z < w && w < y){
+                $('#mybook').booklet({
+                width:  500,
+                height: 350
+              });
+              }else{
+                $('#mybook').booklet({
+                width:  300,
+                height: 210
+              });
+              }
+            });
+          </script>
+
+        <script>
+          $(window).resize(function(){
+            var w = $(window).width();
+            var x = 1400;
+            var y = 800;
+            var z = 500;
+              if (x < w) {
+                $('#mybook').booklet({
+                width:  1000,
+                height: 700
+              });
+              }else if (y < w && w < x){
+                $('#mybook').booklet({
+                width:  650,
+                height: 450
+              });
+              }else if (z < w && w < y){
+                $('#mybook').booklet({
+                width:  500,
+                height: 350
+              });
+              }else{
+                $('#mybook').booklet({
+                width:  300,
+                height: 210
+              });
+              }
+            });
+        </script>
+
+      <div id="face3" class="slide-bottom">
+        <img src="assets/img/faceHappy.png" width="400px" alt="faceHappyImage">
+      </div>
+
+      <div id="hand9">
+        <div>
+          <img src="assets/img/handLeft.png" alt="handLeftImage">
+        </div>
+      </div>
+
+      <script>
+        $(function() {
+          $("#hand9").click(function() {
+            $(this).addClass('fade');
+          });
+        });
+      </script>
+
+      <div id="hand10">
+        <div>
+          <img src="assets/img/handRight.png" alt="handRightImage">
+        </div>
+      </div>
+      <script>
+        $(function() {
+          $("#hand10").click(function() {
+            $(this).addClass('fade');
+          });
+        });
+      </script>
+    </div>
+
+
+
+
+    <div id="last">
+      <h2 class="font1 fontTitle4 fontCenter">8.おわりに</h2>
+      <div>
+        <p class=" font2 fontText2 fontBook fontCenter">
+          私がデザイナーになろうと決意した一番大きな理由は介護アプリのデザインを経験したことにあります。
+          僕が新しいデザインを携えていくと施設の方々が待っていてくださって、レクにたくさんの人が参加し、楽しんでくれました。
+          それがとても感動的でした。自分が作ったもので人の役に立ち、喜ばせる。それが僕にとっての原体験であり、
+          塾講師として生徒を受験で成功させるよりもずっと嬉しかったです。
+          自分の作ったデザインで人を喜ばし役に立ちたい。そう思ってデザイナーを目指しています。
+        </p>
+      </div>
+    </div>
+
+
+
+
+
+    <div id="footer">
+      <p id="footerText" class="font2 fontCenter">
+        COPYRIGHT © 2017 - 田中良樹 ALL RIGHTS RESERVED.
+      </p>
+    </div>
+
+    <script>
+      $(window).fadeThis();
+    </script>
+
+    </div>
+  </body>
+</html>

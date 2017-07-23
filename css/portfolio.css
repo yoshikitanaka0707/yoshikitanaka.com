@@ -1,0 +1,1722 @@
+@font-face {
+    font-family: 'MakibaFont13';
+		font-style: normal;
+    font-weight: normal;
+    src: url('../assets/MakibaFont13.woff') format('woff');
+}
+@font-face {
+    font-family: 'MakibaFontB13';
+    font-style: normal;
+    font-weight: bold;
+    src: url('../assets/MakibaFontB13.woff') format('woff');
+}
+@font-face {
+    font-family: 'HuiFont29';
+    font-style: normal;
+    font-weight: bold;
+    src: url('../assets/HuiFont29.woff') format('woff');
+}
+body{
+   margin: 0px;
+   padding: 0px;
+   background-color: #fff;
+   width: 100%;
+   min-width: 320px;
+}
+#wrapper {
+  overflow-x: hidden;
+}
+
+.font1{
+  font-family: 'MakibaFont13';
+}
+.font2{
+      font-family: 'HuiFont29';
+}
+
+.fontTitle{
+  font-size: 2.5vw;
+}
+.fontTitle2{
+  font-size: 2.5vw;
+}
+.fontTitle3{
+  font-size: 2vw;
+}
+.fontTitle7{
+  font-size: 2vw;
+}
+.fontTitle4{
+  font-size: 3vw;
+}
+.fontCenter{
+  text-align: center;
+}
+.fontText{
+  font-size: 1vw;
+}
+.fontText2{
+  font-size: 1vw;
+  line-height: 2vw;
+}
+.fontText7{
+  font-size: 1vw;
+  line-height: 2vw;
+}
+.fontText3{
+  font-size: 1.5vw;
+  line-height: 26px;
+}
+.fontText4{
+  font-size: 1.5vw;
+  line-height: 36px;
+}
+.fontText5{
+  font-size: 1.5vw;
+  line-height: 2vw;
+}
+@media only screen and (min-width:800px) and ( max-width:1400px)  {
+  .fontTitle{
+    font-size: 3vw;
+  }
+  .fontTitle2{
+    font-size: 3vw;
+  }
+  .fontTitle3{
+    font-size: 2.5vw;
+  }
+  .fontTitle7{
+    font-size: 2.5vw;
+  }
+  .fontTitle4{
+    font-size: 4vw;
+  }
+  .fontCenter{
+    text-align: center;
+  }
+  .fontText{
+    font-size: 1.3vw;
+  }
+  .fontText2{
+    font-size: 1.7vw;
+    line-height: 2.5vw;
+  }
+  .fontText7{
+    font-size: 1.4vw;
+    line-height: 2.3vw;
+  }
+  .fontText3{
+    font-size: 2vw;
+    line-height: 26px;
+  }
+  .fontText4{
+    font-size: 2vw;
+    line-height: 36px;
+  }
+  .fontText5{
+    font-size: 2vw;
+    line-height: 2vw;
+  }
+}
+@media only screen and (min-width:320px) and ( max-width:800px)  {
+  .fontTitle{
+    font-size: 5vw;
+  }
+  .fontTitle2{
+    font-size: 3vw;
+  }
+  .fontTitle3{
+    font-size: 4vw;
+  }
+  .fontTitle7{
+    font-size: 3vw;
+  }
+  .fontTitle4{
+    font-size: 5vw;
+  }
+  .fontCenter{
+    text-align: center;
+  }
+  .fontText{
+    font-size: 2vw;
+    line-height: 1vw;
+  }
+  .fontText2{
+    font-size: 2.7vw;
+    line-height: 3.5vw;
+  }
+  .fontText7{
+    font-size: 2vw;
+    line-height: 3vw;
+  }
+  .fontText3{
+    font-size: 2.5vw;
+    line-height: 26px;
+  }
+  .fontText4{
+    font-size: 2vw;
+    line-height: 36px;
+  }
+  .fontText5{
+    font-size: 2vw;
+    line-height: 2vw;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .fontTitle{
+    font-size: 14px;
+  }
+  .fontTitle2{
+    font-size: 3vw;
+  }
+  .fontTitle3{
+    font-size: 15px;
+  }
+  .fontTitle7{
+    font-size: 12px;
+  }
+  .fontTitle4{
+    font-size: 20px;
+  }
+  .fontCenter{
+    text-align: center;
+  }
+  .fontText{
+    font-size: 2vw;
+  }
+  .fontText2{
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .fontText7{
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .fontText3{
+    font-size: 2vw;
+    line-height: 26px;
+  }
+  .fontText4{
+    font-size: 2vw;
+    line-height: 36px;
+  }
+  .fontText5{
+    font-size: 2vw;
+    line-height: 2vw;
+  }
+}
+
+
+
+
+
+
+
+#loader-bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #fff;
+  z-index: 14;
+}
+#loader {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  margin-top: -150px;
+  margin-left: -150px;
+  text-align: center;
+  color: #fff;
+  z-index: 15;
+}
+
+
+
+
+
+
+
+
+#opening{
+ text-align: center;
+}
+#center{
+  top: auto;
+  left: auto;
+  bottom: auto;
+  right: auto;
+  display: inline-block;
+  position: relative;
+}
+#imagesequence img{
+  width: 250px;
+  margin-top:-125px;
+  margin-left:-125px;
+}
+@media screen and (min-width:800px) and ( max-width:1400px)  {
+  #imagesequence img{
+    width: 200px;
+    margin-top:-100px;
+    margin-left:-100px;
+  }
+}
+@media screen and (min-width:320px) and ( max-width:800px)  {
+  #imagesequence img{
+    width: 200px;
+    margin-top:-100px;
+    margin-left:-100px;
+  }
+}
+@media screen and (max-width: 320px) {
+  #imagesequence img{
+    margin-top:-75px;
+    margin-left:-75px;
+    width: 150px;
+  }
+}
+
+
+
+
+
+
+
+              #portfolio{
+                margin-top: -250px;
+                text-align: center;
+                position: relative;
+              }
+              @media screen and (min-width:800px) and ( max-width:1400px)  {
+                #portfolio{
+                  margin-top: -150px;
+                  text-align: center;
+                  position: relative;
+                }
+              }
+              @media screen and (min-width:320px) and ( max-width:800px)  {
+                #portfolio{
+                  margin-top: -200px;
+                  text-align: center;
+                  position: relative;
+                }
+              }
+              @media screen and (max-width: 320px) {
+                #portfolio{
+                  margin-top: -150px;
+                  text-align: center;
+                  position: relative;
+                }
+              }
+              #animation2{
+                position: relative;
+                z-index: 0;
+              }
+              #portfolioTitle{
+                position: relative;
+                z-index: 7;
+              }
+              #index{
+                position: absolute;
+                z-index: 12;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+              }
+              #indexContent{
+                white-space: nowrap;
+                font-size: 1.2vw;
+                line-height: 2vw;
+                display: inline-block;
+                vertical-align: middle;
+                text-align: left;
+                position: relative;
+                z-index: 8;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+              }
+              @media screen and (min-width:320px) and ( max-width:800px)  {
+              #indexContent{
+                    white-space: nowrap;
+                font-size: 3vw;
+                line-height: 4vw;
+                display: inline-block;
+                vertical-align: middle;
+                text-align: left;
+                position: relative;
+                z-index: 8;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+              }
+              }
+              @media only screen and (min-width:800px) and ( max-width:1400px)  {
+                #indexContent{
+                  white-space: nowrap;
+                  font-size: 1.5vw;
+                  line-height: 2.5vw;
+                  display: inline-block;
+                  vertical-align: middle;
+                  text-align: left;
+                  position: relative;
+                  z-index: 8;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                }
+              }
+              @media screen and (max-width: 320px) {
+              #indexContent{
+                    white-space: nowrap;
+                font-size: 12px;
+                line-height: 14px;
+                display: inline-block;
+                vertical-align: middle;
+                text-align: left;
+                position: relative;
+                z-index: 8;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+              }
+              }
+              #intro{
+                position: absolute;
+                top: 30vw;
+                left: 0;
+                right: 0;
+                bottom: 0;
+              }
+              @media screen and (min-width:800px) and ( max-width:1400px)  {
+                #intro{
+                  position: absolute;
+                  top: 40vw;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                }
+              }
+              @media screen and (min-width:320px) and ( max-width:800px)  {
+                #intro{
+                  margin-top: 5vw;
+                  position: absolute;
+                  top: 70vw;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                }
+              }
+              @media screen and (max-width: 320px) {
+                #intro{
+                  position: absolute;
+                  top: 250px;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                }
+              }
+              #introText{
+               width: 20vw;
+               line-height: 1.2vw;
+               display: inline-block;
+               vertical-align: middle;
+               text-align: left;
+               top: 0;
+               left: 0;
+               right: 0;
+               bottom: 0;
+              }
+              @media screen and (min-width:800px) and ( max-width:1400px)  {
+                #introText{
+                 width: 30vw;
+                 line-height: 2vw;
+                 display: inline-block;
+                 vertical-align: middle;
+                 text-align: left;
+                 top: 0;
+                 left: 0;
+                 right: 0;
+                 bottom: 0;
+                }
+              }
+              @media screen and (min-width:320px) and ( max-width:800px)  {
+                #introText{
+                 width: 60vw;
+                 line-height: 3.5vw;
+                 display: inline-block;
+                 vertical-align: middle;
+                 text-align: left;
+                 top: 0;
+                 left: 0;
+                 right: 0;
+                 bottom: 0;
+                }
+              }
+              @media screen and (max-width: 320px) {
+                #introText{
+                 width: 200px;
+                 line-height: 10px;
+                 display: inline-block;
+                 vertical-align: middle;
+                 text-align: left;
+                 top: 0;
+                 left: 0;
+                 right: 0;
+                 bottom: 0;
+                }
+              }
+              #handBody{
+                position: absolute;
+                width: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+              }
+              #handBody img{
+                width: 70%;
+              }
+              @media screen and (min-width:800px) and ( max-width:1400px)  {
+                #handBody{
+                        position: absolute;
+                  width: 100%;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                }
+                #handBody img{
+                  width: 100%;
+                }
+              }
+              @media screen and (max-width: 800px) {
+                #handBody{
+                        position: absolute;
+                  width: 100%;
+                  top: 0;
+                  left: -40%;
+                  right: 0;
+                  bottom: 0;
+                }
+                #handBody img{
+                  width: 180%;
+                }
+              }
+              #head{
+                position: relative;
+                width: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+              }
+              #head img{
+                width: 70%;
+              }
+              @media screen and (min-width:800px) and ( max-width:1400px)  {
+                #head{
+                  position: relative;
+                  width: 100%;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                }
+                #head img{
+                  width: 100%;
+                }
+              }
+              @media screen and (max-width: 800px) {
+                #head{
+                  position: relative;
+                  width: 100%;
+                  top: 0;
+                  left: -40%;
+                  right: 0;
+                  bottom: 0;
+                }
+                #head img{
+                  width: 180%;
+                }
+              }
+
+
+
+
+
+
+                        #aboutMe{
+                          text-align: center;
+                          margin-top: 15vw;
+                        }
+                        @media screen and (min-width:800px) and ( max-width:1400px)  {
+                          #aboutMe{
+                            text-align: center;
+                            margin-top: 20vw;
+                          }
+                        }
+                        @media screen and (min-width:320px) and ( max-width:800px)  {
+                          #aboutMe{
+                            text-align: center;
+                            margin-top: 30vw;
+                          }
+                        }
+                        @media screen and (max-width: 320px) {
+                          #aboutMe{
+                            text-align: center;
+                            margin-top: 100px;
+                          }
+                        }
+                          #aboutMeTitle{
+                          margin-bottom: 7vw;
+                          }
+                        @media screen and (min-width:800px) and ( max-width:1400px)  {
+                          #aboutMeTitle{
+                          margin-bottom: 7vw;
+                          }
+                        }
+                        @media screen and (min-width:320px) and ( max-width:800px)  {
+                          #aboutMeTitle{
+                          margin-bottom: 6.5vw;
+                          }
+                        }
+                        @media screen and (max-width: 320px) {
+                          #aboutMeTitle{
+                          margin-bottom: 30px;
+                          }
+                        }
+                        .skillText{
+                          width: 30vw;
+                          text-align: left;
+                          margin-left: 3vw;
+                          margin-right:3vw;
+                          vertical-align: top;
+                          display: inline-block;
+                        }
+                        @media screen and (min-width:800px) and ( max-width:1400px)  {
+                          .skillText{
+                            width: 30vw;
+                            text-align: left;
+                            margin-left: 3vw;
+                            margin-right:3vw;
+                            vertical-align: top;
+                            display: inline-block;
+                          }
+                        }
+                        @media screen and (min-width:320px) and ( max-width:800px)  {
+                          .skillText{
+                            width: 50vw;
+                            text-align: left;
+                            margin-left: 3vw;
+                            margin-right:3vw;
+                            vertical-align: top;
+                            display: inline-block;
+                          }
+                        }
+                        @media screen and (max-width: 320px) {
+                          .skillText{
+                            width: 180px;
+                            text-align: left;
+                            margin-left: 5px;
+                            margin-right:5px;
+                            vertical-align: top;
+                            display: inline-block;
+                          }
+                        }
+                        .skillPadding{
+                          padding-top: 3vw;
+                        }
+                        @media screen and (min-width:800px) and ( max-width:1400px)  {
+                          .skillPadding{
+                            padding-top: 3vw;
+                          }
+                        }
+                        @media screen and (min-width:320px) and ( max-width:800px)  {
+                          .skillPadding{
+                            padding-top: 3vw;
+                          }
+                        }
+                        @media screen and (max-width: 320px) {
+                          .skillPadding{
+                            padding-top: 3vw;
+                          }
+                        }
+                        .skillImage{
+                          display: inline-block;
+                        }
+                        .skillImage img{
+                          padding-top:3vw;
+                          width: 25vw;
+                        }
+                        @media screen and (min-width:600px) and ( max-width:1400px)  {
+                          .skillImage img{
+                            padding-top:6vw;
+                            width: 25vw;
+                          }
+                        }
+                        @media screen and (min-width:320px) and ( max-width:800px)  {
+                          .skillImage img{
+                            padding-top:12vw;
+                            width: 30vw;
+                          }
+                        }
+                        @media screen and (max-width: 320px) {
+                          .skillImage img{
+                            padding-top:60px;
+                            width: 100px;
+                          }
+                        }
+                        .skillImage2{
+                          display: inline-block;
+                        }
+                        .skillImage2 img{
+                          padding-top:3vw;
+                          width: 20vw;
+                        }
+                        @media screen and (min-width:600px) and ( max-width:1400px)  {
+                          .skillImage2 img{
+                            padding-top:6vw;
+                            width: 20vw;
+                          }
+                        }
+                        @media screen and (min-width:320px) and ( max-width:800px)  {
+                          .skillImage2 img{
+                            padding-top:12vw;
+                            width: 25vw;
+                          }
+                        }
+                        @media screen and (max-width: 320px) {
+                          .skillImage2 img{
+                            padding-top:60px;
+                            width: 100px;
+                          }
+                        }
+
+
+
+
+                                  #desighnSkill{
+                                    text-align: center;
+                                  }
+                                  #chapter2{
+                                    margin-top: 10vw;
+                                    margin-bottom: 6vw;
+                                  }
+                                  .skillBox{
+                                    margin: 0 5vw 0 5vw;
+                                    width: 20vw;
+                                    display: inline-block;
+                                  }
+                                  .skillBox svg{
+                                    width: 10vw;
+                                  }
+                                  .skillPosition{
+                                    margin-top: -2vw;
+                                  }
+
+                                  @media screen and (min-width:800px) and ( max-width:1400px)  {
+                                    .skillBox{
+                                      margin: 0 5vw 0 5vw;
+                                      width: 30vw;
+                                      display: inline-block;
+                                    }
+                                    .skillBox svg{
+                                      width: 15vw;
+                                    }
+                                    .skillPosition{
+                                      margin-top: -2vw;
+                                    }
+                                  }
+                                  @media screen and (min-width:320px) and ( max-width:800px)  {
+                                    .skillBox{
+                                      margin: 0 5vw 0 5vw;
+                                      width: 30vw;
+                                      display: inline-block;
+                                    }
+                                    .skillBox svg{
+                                      width: 20vw;
+                                    }
+                                    .skillPosition{
+                                      margin-top: -2vw;
+                                    }
+                                  }
+                                  @media screen and (max-width: 320px) {
+                                    .skillBox{
+                                      margin: 0 5px 0 5px;
+                                      width: 130px;
+                                      display: inline-block;
+                                    }
+                                    .skillBox svg{
+                                      width: 80px;
+                                    }
+                                  .skillPosition{
+                                    margin-top: -20px;
+                                  }
+                                  }
+
+
+
+
+
+
+
+                                      #chapter3{
+                                        padding-top: 10vw;
+                                      }
+                                      @media screen and (min-width:800px) and ( max-width:1400px)  {
+                                        #chapter3{
+                                          padding-top: 10vw;
+                                        }
+                                      }
+                                      @media screen and (min-width:320px) and ( max-width:800px)  {
+                                        #chapter3{
+                                          padding-top: 10vw;
+                                        }
+                                      }
+                                      @media screen and (max-width: 320px) {
+                                        #chapter3{
+                                          padding-top: 10vw;
+                                        }
+                                      }
+                                      #plane {
+                                        width:8vw;
+                                      }
+                                      @media screen and (min-width:800px) and ( max-width:1400px)  {
+                                        #plane {
+                                          width:12vw;
+                                        }
+                                      }
+                                      @media screen and (min-width:320px) and ( max-width:800px)  {
+                                        #plane {
+                                          width:18vw;
+                                        }
+                                      }
+                                      @media screen and (max-width: 320px) {
+                                        #plane {
+                                          width:50px;
+                                        }
+                                      }
+                                      #RIP {
+                                        margin-top: 0;
+                                      }
+                                      @media screen and (min-width:800px) and ( max-width:1400px)  {
+                                        #RIP {
+                                          margin-top: -10vw;
+                                        }
+                                      }
+                                      @media screen and (min-width:320px) and ( max-width:800px)  {
+                                        #RIP {
+                                          margin-top: -40vw;
+                                        }
+                                      }
+                                      @media screen and (max-width: 320px) {
+                                        #RIP {
+                                          margin-top: -400px;
+                                        }
+                                      }
+                                      #RIP img{
+                                        width: 8vw;
+                                      }
+                                      @media screen and (min-width:800px) and ( max-width:1400px)  {
+                                        #RIP img{
+                                          width: 12vw;
+                                          top: 0;
+                                          left: 0;
+                                          right: 0;
+                                          bottom: 0;
+                                          margin: auto;
+                                        }
+                                      }
+                                      @media screen and (min-width:320px) and ( max-width:800px)  {
+                                        #RIP img{
+                                          width: 15vw;
+                                          top: 0;
+                                          left: 0;
+                                          right: 0;
+                                          bottom: 0;
+                                          margin: auto;
+                                        }
+                                      }
+                                      @media screen and (max-width: 320px) {
+                                        #RIP img{
+                                          width: 70px;
+                                          top: 0;
+                                          left: 0;
+                                          right: 0;
+                                          bottom: 0;
+                                          margin: auto;
+                                        }
+                                      }
+
+                                      #intern{
+                                        width: 40vw;
+                                        top: 0;
+                                        left: 0;
+                                        right: 0;
+                                        bottom: 0;
+                                        margin: auto;
+                                      }
+                                      @media screen and (min-width:800px) and ( max-width:1400px)  {
+                                        #intern{
+                                          width: 60vw;
+                                          top: 0;
+                                          left: 0;
+                                          right: 0;
+                                          bottom: 0;
+                                          margin: auto;
+                                        }
+                                      }
+                                      @media screen and (min-width:320px) and ( max-width:800px)  {
+                                        #intern{
+                                          width: 70vw;
+                                          top: 0;
+                                          left: 0;
+                                          right: 0;
+                                          bottom: 0;
+                                          margin: auto;
+                                        }
+                                      }
+                                      @media screen and (max-width: 320px) {
+                                        #intern{
+                                          width: 300px;
+                                          top: 0;
+                                          left: 0;
+                                          right: 0;
+                                          bottom: 0;
+                                          margin: auto;
+                                        }
+                                      }
+
+
+
+                                            #lifeIsTech{
+                                              margin-top: 12vw;
+                                              position: relative;
+                                            }
+                                            #position{
+                                              position: absolute;
+                                              top: 20vw;
+                                              left: 6vw;
+                                              z-index: 4;
+                                            }
+                                            #position p{
+                                              position: relative;
+                                              width: 15vw;
+                                              z-index: 5;
+                                            }
+                                            #back {
+                                              margin-top: -45vw;
+                                              z-index: 3;
+                                              position: relative;
+                                            }
+                                            #back img{
+                                              width: 27vw;
+                                            }
+                                            @media screen and (min-width:800px) and ( max-width:1400px)  {
+                                              #lifeIsTech{
+                                                margin-top: 10vw;
+                                                position: relative;
+                                              }
+                                              #position{
+                                                margin-left: 1vw;
+                                                position: absolute; top:15vw;
+                                                z-index: 4;
+                                              }
+                                              #position p{
+                                                position: relative;
+                                                width: 20vw;
+                                                z-index: 5;
+                                              }
+                                              #back {
+                                                margin-top: -52vw;
+                                                z-index: 3;
+                                                position: relative;
+                                              }
+                                              #back img{
+                                                width: 35vw;
+                                              }
+                                            }
+
+                                            @media screen and (min-width:320px) and ( max-width:800px)  {
+                                              #lifeIsTech{
+                                                margin-top: 15vw;
+                                                position: relative;
+                                              }
+                                              #position{
+                                                margin-left: 0.1vw;
+                                                position: absolute; top:8vw;
+                                                z-index: 4;
+                                              }
+                                              #position p{
+                                                top: 0;
+                                                left: 0;
+                                                right: 0;
+                                                bottom: 0;
+                                                margin: auto;
+                                                position: relative;
+                                                width: 27vw;
+                                                z-index: 5;
+                                              }
+                                              #back {
+                                                margin-top: -57vw;
+                                                z-index: 3;
+                                                position: relative;
+                                              }
+                                              #back img{
+                                                width: 35vw;
+                                              }
+                                            }
+
+                                            @media screen and (max-width: 320px) {
+                                              #lifeIsTech{
+                                                margin-top: 80px;
+                                                position: relative;
+                                              }
+                                              #position{
+                                                margin-left: 3px;
+                                                position: absolute; top:10px;
+                                                z-index: 4;
+                                              }
+                                              #position p{
+                                                top: 0;
+                                                left: 0;
+                                                right: 0;
+                                                bottom: 0;
+                                                margin: auto;
+                                                position: relative;
+                                                width: 100px;
+                                                z-index: 5;
+                                              }
+                                              #back {
+                                                margin-top: -200px;
+                                                z-index: 3;
+                                                position: relative;
+                                              }
+                                              #back img{
+                                                width: 130px;
+                                              }
+                                            }
+                                            #position h2{
+                                              position: relative;
+                                              z-index: 5;
+                                            }
+                                            video {
+                                              position: relative;
+                                              z-index: 3;
+                                            width: 100%;
+                                            }
+
+
+
+
+
+
+
+                                            #hackson{
+                                              padding-top: 700px;
+                                              position: relative;
+                                              z-index: 1;
+                                            }
+                                            #slider{
+                                              top: 0;
+                                              left: 0;
+                                              right: 0;
+                                              bottom: 0;
+                                              margin: auto;
+                                              width: 1000px;
+                                              position: relative;
+                                              z-index: 3;
+                                            }
+                                            #face{
+                                              position: relative;
+                                              z-index: 0;
+                                                text-align: center;
+                                                margin-top: -910px;
+                                            }
+                                            #face img{
+                                              width: 400px;
+                                            }
+                                            #hand7{
+                                              position: relative;
+                                              z-index: 5;
+                                              margin-left: -900px;
+                                              margin-top: -150px;
+                                                text-align: center;
+                                            }
+                                            #hand7 img{
+                                              width: 300px
+                                            }
+                                            #hand8{
+                                              position: relative;
+                                              z-index: 5;
+                                              margin-left: 900px;
+                                              margin-top: -270px;
+                                                text-align: center;
+                                            }
+                                            #hand8 img{
+                                              width: 300px
+                                            }
+                                            @media screen and (min-width:800px) and ( max-width:1400px)  {
+                                              #hackson{
+                                                padding-top: 400px;
+                                                position: relative;
+                                                z-index: 1;
+                                              }
+                                              #slider{
+                                                top: 0;
+                                                left: 0;
+                                                right: 0;
+                                                bottom: 0;
+                                                margin: auto;
+                                                width: 650px;
+                                                position: relative;
+                                                z-index: 3;
+                                              }
+                                              #face{
+                                                position: relative;
+                                                z-index: 0;
+                                                  text-align: center;
+                                                  margin-top: -640px;
+                                              }
+                                              #face img{
+                                                width: 300px;
+                                              }
+                                              #hand7{
+                                                position: relative;
+                                                z-index: 5;
+                                                margin-left: -600px;
+                                                margin-top: -100px;
+                                                  text-align: center;
+                                              }
+                                              #hand7 img{
+                                                width: 200px
+                                              }
+                                              #hand8{
+                                                position: relative;
+                                                z-index: 5;
+                                                margin-left: 600px;
+                                                margin-top: -170px;
+                                                  text-align: center;
+                                              }
+                                              #hand8 img{
+                                                width: 200px
+                                              }
+                                            }
+                                            @media screen and (min-width:500px) and ( max-width:800px)  {
+                                              #hackson{
+                                                padding-top: 300px;
+                                                position: relative;
+                                                z-index: 1;
+                                              }
+                                              #slider{
+                                                top: 0;
+                                                left: 0;
+                                                right: 0;
+                                                bottom: 0;
+                                                margin: auto;
+                                                width: 500px;
+                                                position: relative;
+                                                z-index: 3;
+                                              }
+                                              #face{
+                                                position: relative;
+                                                z-index: 0;
+                                                  text-align: center;
+                                                  margin-top: -490px;
+                                              }
+                                              #face img{
+                                                width: 200px;
+                                              }
+                                              #hand7{
+                                                position: relative;
+                                                z-index: 5;
+                                                margin-left: -480px;
+                                                margin-top: -50px;
+                                                  text-align: center;
+                                              }
+                                              #hand7 img{
+                                                opacity: 0;
+                                                width: 150px
+                                              }
+                                              #hand8{
+                                                position: relative;
+                                                z-index: 5;
+                                                margin-left: 480px;
+                                                margin-top: -130px;
+                                                  text-align: center;
+                                              }
+                                              #hand8 img{
+                                                opacity: 0;
+                                                width: 150px
+                                              }
+                                            }
+                                            @media screen and ( max-width:500px)  {
+                                              #hackson{
+                                                padding-top: 200px;
+                                                position: relative;
+                                                z-index: 1;
+                                              }
+                                              #slider{
+                                                top: 0;
+                                                left: 0;
+                                                right: 0;
+                                                bottom: 0;
+                                                margin: auto;
+                                                width: 300px;
+                                                position: relative;
+                                                z-index: 3;
+                                              }
+                                              #face{
+                                                position: relative;
+                                                z-index: 0;
+                                                  text-align: center;
+                                                  margin-top: -340px;
+                                              }
+                                              #face img{
+                                                width: 150px;
+                                              }
+                                              #hand7{
+                                                position: relative;
+                                                z-index: 5;
+                                                margin-left: -280px;
+                                                margin-top: -50px;
+                                                  text-align: center;
+                                              }
+                                              #hand7 img{
+                                                opacity: 0;
+                                                width: 100px
+                                              }
+                                              #hand8{
+                                                position: relative;
+                                                z-index: 5;
+                                                margin-left: 280px;
+                                                margin-top: -90px;
+                                                  text-align: center;
+                                              }
+                                              #hand8 img{
+                                                opacity: 0;
+                                                width: 100px
+                                              }
+                                            }
+
+
+
+
+
+
+
+
+                                                                #smarec{
+                                                                  position: relative;
+                                                                   margin-top: 900px;
+                                                                }
+                                                                .fontTitle9{
+                                                                  font-size: 33px;
+                                                                }
+                                                                .fontText10{
+                                                                  font-size: 22px;
+                                                                  line-height: 36px;
+                                                                }
+                                                                .smarecFont1 p{
+                                                                  width: 300px;
+                                                                  top: 0;
+                                                                  left: 0;
+                                                                  right: 0;
+                                                                  bottom: 0;
+                                                                  margin: auto;
+                                                                }
+                                                                .smarecFont2 p{
+                                                                  width: 400px;
+                                                                  top: 0;
+                                                                  left: 0;
+                                                                  right: 0;
+                                                                  bottom: 0;
+                                                                  margin: auto;
+                                                                }
+                                                                #book{
+                                                                  position: relative;
+                                                                  z-index: 0;
+                                                                }
+                                                                #string{
+                                                                  margin-top: 120px;
+                                                                  text-align: center;
+                                                                }
+                                                                #string img{
+                                                                  width: 100px;
+                                                                }
+                                                                #part2Image img{
+                                                                  width: 500px;
+                                                                }
+                                                                #part2{
+                                                                  margin-top: 200px;
+                                                                }
+                                                                #part3{
+                                                                  margin-top: 40px;
+                                                                }
+                                                                #part3Image img{
+                                                                  width: 500px;
+                                                                }
+                                                                #part4{
+                                                                 padding-top: 80px;
+                                                                }
+                                                                #part4Image img{
+                                                                  width: 500px;
+                                                                }
+                                                                #part5Image img{
+                                                                  width: 500px;
+                                                                }
+                                                                #part6Image img{
+                                                                  width: 500px;
+                                                                }
+                                                                #part7Image img{
+                                                                  width: 500px;
+                                                                }
+                                                                .fontBook{
+                                                                  margin-left: 40px;
+                                                                }
+                                                                #face3{
+                                                                  position: relative;
+                                                                  text-align: center;
+                                                                 margin-top: -990px;
+                                                                }
+                                                                #hand9{
+                                                                  position: relative;
+                                                                  z-index: 10;
+                                                                  margin-left: -900px;
+                                                                  margin-top: -150px;
+                                                                    text-align: center;
+                                                                }
+                                                                #hand10{
+                                                                  position: relative;
+                                                                  z-index: 10;
+                                                                  margin-left: 900px;
+                                                                  margin-top: -270px;
+                                                                    text-align: center;
+                                                                }
+                                                                @media screen and (min-width:800px) and ( max-width:1400px)  {
+                                                                  #smarec{
+                                                                    position: relative;
+                                                                     margin-top: 600px;
+                                                                  }
+                                                                  .fontTitle9{
+                                                                    font-size: 24px;
+                                                                  }
+                                                                  .fontText10{
+                                                                    font-size: 16px;
+                                                                    line-height: 24px;
+                                                                  }
+                                                                  .smarecFont1 p{
+                                                                    width: 250px;
+                                                                    top: 0;
+                                                                    left: 0;
+                                                                    right: 0;
+                                                                    bottom: 0;
+                                                                    margin: auto;
+                                                                  }
+                                                                  .smarecFont2 p{
+                                                                    width: 300px;
+                                                                    top: 0;
+                                                                    left: 0;
+                                                                    right: 0;
+                                                                    bottom: 0;
+                                                                    margin: auto;
+                                                                  }
+                                                                  #book{
+                                                                    position: relative;
+                                                                    z-index: 0;
+                                                                  }
+                                                                  #string{
+                                                                    margin-top: 60px;
+                                                                    text-align: center;
+                                                                  }
+                                                                  #string img{
+                                                                    width: 80px;
+                                                                  }
+                                                                  #part2Image img{
+                                                                    width: 325px;
+                                                                  }
+                                                                  #part2{
+                                                                    margin-top: 100px;
+                                                                  }
+                                                                  #part3{
+                                                                    margin-top: 20px;
+                                                                  }
+                                                                  #part3Image img{
+                                                                    width: 325px;
+                                                                  }
+                                                                  #part4{
+                                                                   padding-top: 80px;
+                                                                  }
+                                                                  #part4Image img{
+                                                                    width: 325px;
+                                                                  }
+                                                                  #part5Image img{
+                                                                    width: 325px;
+                                                                  }
+                                                                  #part6Image img{
+                                                                    width: 325px;
+                                                                  }
+                                                                  #part7Image img{
+                                                                    width: 325px;
+                                                                  }
+                                                                  .fontBook{
+                                                                    margin-left: 15px;
+                                                                  }
+                                                                  #face3{
+                                                                    position: relative;
+                                                                    text-align: center;
+                                                                   margin-top: -670px;
+                                                                  }
+                                                                  #face3 img{
+                                                                    width: 300px;
+                                                                  }
+                                                                  #hand9{
+                                                                    position: relative;
+                                                                    z-index: 10;
+                                                                    margin-left: -600px;
+                                                                    margin-top: -100px;
+                                                                      text-align: center;
+                                                                  }
+                                                                  #hand9 img{
+                                                                    width: 200px;
+                                                                  }
+                                                                  #hand10{
+                                                                    position: relative;
+                                                                    z-index: 10;
+                                                                    margin-left: 600px;
+                                                                    margin-top: -170px;
+                                                                      text-align: center;
+                                                                  }
+                                                                  #hand10 img{
+                                                                    width: 200px;
+                                                                  }
+
+                                                                }
+                                                                @media screen and (min-width:500px) and ( max-width:800px)  {
+                                                                   #smarec{
+                                                                     position: relative;
+                                                                      margin-top: 400px;
+                                                                   }
+                                                                   .fontTitle9{
+                                                                     font-size: 20px;
+                                                                   }
+                                                                   .fontText10{
+                                                                     font-size: 14px;
+                                                                     line-height: 20px;
+                                                                   }
+                                                                   .smarecFont1 p{
+                                                                     width: 225px;
+                                                                     top: 0;
+                                                                     left: 0;
+                                                                     right: 0;
+                                                                     bottom: 0;
+                                                                     margin: auto;
+                                                                   }
+                                                                   .smarecFont2 p{
+                                                                     width: 240px;
+                                                                     top: 0;
+                                                                     left: 0;
+                                                                     right: 0;
+                                                                     bottom: 0;
+                                                                     margin: auto;
+                                                                   }
+                                                                   #book{
+                                                                     position: relative;
+                                                                     z-index: 0;
+                                                                   }
+                                                                   #string{
+                                                                     margin-top: 40px;
+                                                                     text-align: center;
+                                                                   }
+                                                                   #string img{
+                                                                     width: 50px;
+                                                                   }
+                                                                   #part2Image img{
+                                                                     width: 250px;
+                                                                   }
+                                                                   #part2{
+                                                                     margin-top: 100px;
+                                                                   }
+                                                                   #part3{
+                                                                     margin-top: 20px;
+                                                                   }
+                                                                   #part3Image img{
+                                                                     width: 250px;
+                                                                   }
+                                                                   #part4{
+                                                                    padding-top: 80px;
+                                                                   }
+                                                                   #part4Image img{
+                                                                     width: 250px;
+                                                                   }
+                                                                   #part5Image img{
+                                                                     width: 250px;
+                                                                   }
+                                                                   #part6Image img{
+                                                                     width: 250px;
+                                                                   }
+                                                                   #part7Image img{
+                                                                     width: 250px;
+                                                                   }
+                                                                   .fontBook{
+                                                                     margin-left:  10px;
+                                                                   }
+                                                                   #face3{
+                                                                     position: relative;
+                                                                     text-align: center;
+                                                                    margin-top: -500px;
+                                                                   }
+                                                                   #face3 img{
+                                                                     width: 200px;
+                                                                   }
+                                                                   #hand9{
+                                                                     position: relative;
+                                                                     z-index: 10;
+                                                                     margin-left: -480px;
+                                                                     margin-top: -60px;
+                                                                       text-align: center;
+                                                                   }
+                                                                   #hand9 img{
+                                                                     opacity: 0;
+                                                                     width: 150px;
+                                                                   }
+                                                                   #hand10{
+                                                                     position: relative;
+                                                                     z-index: 10;
+                                                                     margin-left: 480px;
+                                                                     margin-top: -130px;
+                                                                       text-align: center;
+                                                                   }
+                                                                   #hand10 img{
+                                                                     opacity:0;
+                                                                     width: 150px;
+                                                                   }
+
+                                                                }
+
+                                                                @media screen and ( max-width:500px)  {
+                                                                  #smarec{
+                                                                    position: relative;
+                                                                     margin-top: 300px;
+                                                                  }
+                                                                  .fontTitle9{
+                                                                    font-size: 14px;
+                                                                  }
+                                                                  .fontText10{
+                                                                    font-size: 12px;
+                                                                    line-height: 10px;
+                                                                  }
+                                                                  .smarecFont1 p{
+                                                                    width: 140px;
+                                                                    top: 0;
+                                                                    left: 0;
+                                                                    right: 0;
+                                                                    bottom: 0;
+                                                                    margin: auto;
+                                                                  }
+                                                                  .smarecFont2 p{
+                                                                    width: 140px;
+                                                                    top: 0;
+                                                                    left: 0;
+                                                                    right: 0;
+                                                                    bottom: 0;
+                                                                    margin: auto;
+                                                                  }
+                                                                  #book{
+                                                                    position: relative;
+                                                                    z-index: 0;
+                                                                  }
+                                                                  #string{
+                                                                    margin-top: 10px;
+                                                                    text-align: center;
+                                                                  }
+                                                                  #string img{
+                                                                    width: 30px;
+                                                                  }
+                                                                  #part2Image img{
+                                                                    width: 150px;
+                                                                  }
+                                                                  #part2{
+                                                                    margin-top: 30px;
+                                                                  }
+                                                                  #part3{
+                                                                    margin-top: 0px;
+                                                                  }
+                                                                  #part3Image img{
+                                                                    width: 150px;
+                                                                  }
+                                                                  #part4{
+                                                                   padding-top: 80px;
+                                                                  }
+                                                                  #part4Image img{
+                                                                    width: 150px;
+                                                                  }
+                                                                  #part5Image img{
+                                                                    width: 150px;
+                                                                  }
+                                                                  #part6Image img{
+                                                                    width: 150px;
+                                                                  }
+                                                                  #part7Image img{
+                                                                    width: 150px;
+                                                                  }
+                                                                  .fontBook{
+                                                                    margin-left: 5px;
+                                                                  }
+                                                                  #face3{
+                                                                    position: relative;
+                                                                    text-align: center;
+                                                                   margin-top: -325px;
+                                                                  }
+                                                                  #face3 img{
+                                                                    width: 150px;
+                                                                  }
+                                                                  #hand9{
+                                                                    position: relative;
+                                                                    z-index: 10;
+                                                                    margin-left: -480px;
+                                                                    margin-top: -60px;
+                                                                      text-align: center;
+                                                                  }
+                                                                  #hand9 img{
+                                                                    opacity: 0;
+                                                                    width: 150px;
+                                                                  }
+                                                                  #hand10{
+                                                                    position: relative;
+                                                                    z-index: 10;
+                                                                    margin-left: 480px;
+                                                                    margin-top: -130px;
+                                                                      text-align: center;
+                                                                  }
+                                                                  #hand10 img{
+                                                                    opacity:0;
+                                                                    width: 150px;
+                                                                  }
+                                                                }
+
+
+
+
+
+
+
+
+
+
+
+
+#last{
+  padding-top:  800px;
+}
+#last p{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 500px;
+}
+#footer{
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+#footerText{
+  font-size: 12px;
+}
+
+@media screen and (min-width:800px) and ( max-width:1400px)  {
+  #last{
+    padding-top:  500px;
+  }
+  #last p{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 500px;
+  }
+  #footer{
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  #footerText{
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width:500px) and ( max-width:800px)  {
+  #last{
+    padding-top:  300px;
+  }
+  #last p{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 400px;
+  }
+  #footer{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  #footerText{
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width:320px) and ( max-width:500px)  {
+  #last{
+    padding-top:  200px;
+  }
+  #last p{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 300px;
+  }
+  #footer{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  #footerText{
+    font-size: 10px;
+  }
+}
+
+@media screen and ( max-width:320px)  {
+  #last{
+    padding-top:  150px;
+  }
+  #last p{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 300px;
+  }
+  #footer{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  #footerText{
+    font-size: 10px;
+  }
+}
